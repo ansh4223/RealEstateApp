@@ -1,10 +1,9 @@
 import express from "express";
+import postRoute from "./routes/post.route.js";
 
 const app = express();
 
-app.use("/api/test", (req,res) => {
-    res.send("Hey there!");
-})
+app.use("/api/posts", postRoute);
 
 app.listen(5500, () => {
     console.log("Server is running");
